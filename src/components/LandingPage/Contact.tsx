@@ -160,7 +160,7 @@ const Contact = () => {
                     <circle cx="12" cy="10" r="3"/>
                   </svg>
                 </div>
-                <div>
+                <div className='py-8'>
                   <h4 className="text-lg font-bold text-neutral-900 mb-2">Running Track Address</h4>
                   <p className="text-neutral-600 mb-1">Nicosia terminal</p>
                   <p className="text-neutral-600 mb-4">Nicosia, Lefkoşa Türk Beledyesi</p>
