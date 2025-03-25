@@ -3,6 +3,7 @@
 
 * {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
 @custom-variant dark (&:is(.dark *));

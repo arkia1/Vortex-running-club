@@ -23,7 +23,7 @@ const HeroSection = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-20 text-center text-white"
       >
-        <motion.img src="/vortex-w.png" alt="Vortex Logo" initial={{ opacity: 0, y: 20 }} animate={{opacity:1, y: 0}} transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="w-34 h-34 mb-4 rotate-180 flex justify-self-center"/>
+        <motion.img src="/vortex-w.png" alt="Vortex Logo" initial={{ opacity: 0, y: 20 }} animate={{opacity:1, y: 0}} transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="w-34 h-34 mb-4 rotate-180 mx-auto"/>
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

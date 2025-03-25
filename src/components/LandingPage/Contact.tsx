@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import Image from 'next/image';
 
 const Contact = () => {
@@ -79,7 +79,7 @@ const Contact = () => {
     <section className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-zinc-200 py-20 px-4 md:px-8 lg:px-12">
       {/* Background pattern */}
       <div className="absolute inset-0 z-0 opacity-5">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('/path-pattern.svg')] bg-repeat" />
+        <div className="absolute top-0 left-0 w-full h-full bg-neutral-900 " />
       </div>
       
       <motion.div 

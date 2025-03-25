@@ -42,14 +42,14 @@ const Navigation = () => {
               About
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               href="#blogs"
               className="hover:scale-105 transition-transform"
             >
               Blogs
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               href="#contact"

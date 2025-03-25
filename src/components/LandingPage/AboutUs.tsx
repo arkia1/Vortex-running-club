@@ -1,19 +1,18 @@
 "use client";
-import { motion } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+
 const AboutUs = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const scrollRef = useRef(null);
+
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" }
+      transition: { duration: 0.5, ease: "easeOut" }
     }
   };
 
@@ -28,18 +27,21 @@ const AboutUs = () => {
   };
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-zinc-200 py-20 px-4 md:px-8 lg:px-12" id='about'>
+    <section className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-zinc-200 py-20 px-4 md:px-8 lg:px-12" id='about' style={{
+    WebkitOverflowScrolling: 'touch',  // Helps with iOS scrolling
+    WebkitTransform: 'translateZ(0)',  // Forces hardware acceleration
+  }}>
       {/* Background pattern */}
       <div className="absolute inset-0 z-0 opacity-5">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('/path-pattern.svg')] bg-repeat" />
+        <div className="absolute top-0 left-0 w-full h-full bg-neutral-900" />
       </div>
       
       <motion.div 
         className="container mx-auto z-10 max-w-6xl"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={staggerContainer}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.5 }}
       >
         {/* Section Header */}
         <motion.div variants={fadeInUp} className="text-center mb-16">
@@ -176,22 +178,22 @@ const AboutUs = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Sarah Johnson",
-                role: "Founder & Lead Coach",
+                name: "Arta Rostami",
+                role: "Founder",
                 bio: "Marathon runner and certified coach with a passion for helping others discover the joy of running.",
                 image: "/api/placeholder/400/400"
               },
               {
-                name: "Michael Chen",
-                role: "Co-Founder & Community Lead",
+                name: "Arkia Ebrahimi",
+                role: "Community Lead",
                 bio: "Former track athlete who believes in the power of community to motivate and inspire runners of all levels.",
-                image: "/api/placeholder/400/400"
+                image: "/arkia.jpg"
               },
               {
-                name: "Priya Patel",
+                name: "Barman Bayat",
                 role: "Sunday Run Coordinator",
                 bio: "Dedicated runner who ensures our weekly 5km runs are welcoming, organized, and enjoyable for everyone.",
-                image: "/api/placeholder/400/400"
+                image: "/barman.jpeg"
               },
             ].map((member, index) => (
               <motion.div 
@@ -205,6 +207,7 @@ const AboutUs = () => {
                     alt={member.name} 
                     fill
                     className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-6">
