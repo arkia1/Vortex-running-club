@@ -1,3 +1,4 @@
+
 import AboutUs from "@/components/LandingPage/AboutUs";
 import Contact from "@/components/LandingPage/Contact";
 import HeroSection from "@/components/LandingPage/HeroSection";
@@ -7,7 +8,7 @@ export default function LandingPage() {
     <main>
       <HeroSection />
       <AboutUs />
-      <Contact/>
+      <Contact />
     </main>
   );
 }

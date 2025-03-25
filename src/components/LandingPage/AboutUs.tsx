@@ -28,7 +28,7 @@ const AboutUs = () => {
   };
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-zinc-200 py-20 px-4 md:px-8 lg:px-12">
+    <section className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-zinc-200 py-20 px-4 md:px-8 lg:px-12" id='about'>
       {/* Background pattern */}
       <div className="absolute inset-0 z-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/path-pattern.svg')] bg-repeat" />
@@ -115,7 +115,7 @@ const AboutUs = () => {
               className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-xl"
             >
               <Image 
-                src="/api/placeholder/800/800" 
+                src="/members.jpeg" 
                 alt="Running club members on Sunday run" 
                 fill
                 className="object-cover"
@@ -135,7 +135,7 @@ const AboutUs = () => {
               <motion.div variants={fadeInUp}>
                 <h4 className="text-2xl font-bold text-neutral-900 mb-3">Our Story</h4>
                 <p className="text-neutral-700">
-                  Founded in 2015, our running club began with just five friends meeting every Sunday at 9 AM for a casual 5km run. What started as a small gathering has blossomed into a thriving community of runners from all walks of life, united by our love for the sport and the connections we build along the way.
+                  Founded in 2024, our running club began with just five friends meeting every Sunday at 9 AM for a casual 5km run. What started as a small gathering has blossomed into a thriving community of runners from all walks of life, united by our love for the sport and the connections we build along the way.
                 </p>
               </motion.div>
               
@@ -173,7 +173,7 @@ const AboutUs = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 name: "Sarah Johnson",
@@ -193,12 +193,6 @@ const AboutUs = () => {
                 bio: "Dedicated runner who ensures our weekly 5km runs are welcoming, organized, and enjoyable for everyone.",
                 image: "/api/placeholder/400/400"
               },
-              {
-                name: "James Wilson",
-                role: "Training Program Director",
-                bio: "Experienced coach who develops training plans for members preparing for races from 5K to marathon.",
-                image: "/api/placeholder/400/400"
-              }
             ].map((member, index) => (
               <motion.div 
                 key={index}
@@ -230,9 +224,7 @@ const AboutUs = () => {
         >
           <div className="absolute inset-0 opacity-10">
             <div className="absolute right-0 bottom-0">
-              <svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#FFFFFF" d="M44.5,-76.3C59.1,-69.9,73.3,-60.1,81.8,-46.2C90.3,-32.2,93,-14,91.9,3.6C90.8,21.2,85.9,38.2,76.1,51.6C66.2,65,51.5,74.9,35.9,79.3C20.3,83.8,3.8,82.9,-12.4,79.6C-28.6,76.3,-44.5,70.7,-57.4,60.8C-70.3,50.9,-80.1,36.7,-84.8,20.8C-89.5,4.9,-89.1,-12.7,-83,-27.7C-76.9,-42.7,-65.2,-55.1,-51.3,-62.1C-37.4,-69.2,-21.3,-71,-5.5,-62.9C10.4,-54.9,29.8,-82.7,44.5,-76.3Z" transform="translate(100 100)" />
-              </svg>
+              <Image src={"/vortex-w.png"} alt="Vortex Logo" className="rotate-180 hidden md:block" width={300} height={300}/>
             </div>
           </div>
           <div className="relative z-10">
